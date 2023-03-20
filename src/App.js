@@ -23,9 +23,10 @@ function App() {
     <div className="App">
       {data == null && "Loading..."}
       {data?.map((e, i) => (
-        <li key={e.id}>
-          {e.title} {e.url}
-        </li>
+        <div className="grid-box" key={e.id}>
+          <img src={e.url} />
+          {e.title} 
+        </div>
       ))}
     </div>
   );
